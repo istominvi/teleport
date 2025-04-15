@@ -1,2 +1,21 @@
+# Node.js
+node_modules/
 .env
-.env
+.env.local
+*.log
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# System
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# DB
+*.sqlite
+*.pgsql
