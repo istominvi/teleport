@@ -92,28 +92,6 @@ src/
 
 ---
 
-## 🌍 Работа с Git
-
-- Инициализация проекта:
-    ```bash
-    git init
-    git remote add origin git@github.com:istominvi/teleport.git
-    ```
-
-- Добавить и зафиксировать изменения:
-    ```bash
-    git add .
-    git commit -m "Описание изменений"
-    git push
-    ```
-
-- Проверить статус:
-    ```bash
-    git status
-    ```
-
----
-
 ## 📈 Планы развития
 
 - Создание полноценной админ-панели (React + API).
