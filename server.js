@@ -9,6 +9,19 @@ const PORT = process.env.PORT || 3000;
 
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
+const sequelize = require('./src/database/config');
+const User = require('./src/database/models/user');
+
+sequelize.sync()
+  .then(() => {
+    console.log('Database synced');
+  })
+  .catch((error) => {
+    console.error('Error syncing database:', error);
+  });
+
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
