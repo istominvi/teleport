@@ -1,8 +1,16 @@
+require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('teleport_db', 'teleport_user', 'P-335678-p', {
-  host: 'localhost',
-  dialect: 'postgres',
-});
+const sequelize = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
+  {
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    dialect: process.env.DB_DIALECT,
+    logging: false, // Отключаем логирование SQL-запросов
+  }
+);
 
 module.exports = sequelize;
