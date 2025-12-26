@@ -1,32 +1,32 @@
 'use client';
 
 import React from 'react';
-import { Zap, ShieldCheck, Youtube, Gamepad2 } from 'lucide-react';
+import { Zap, ShieldCheck, Lock, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const features = [
   {
     icon: Zap,
-    title: 'Мгновенное подключение',
-    description: 'Ключ доступа за 1 минуту через Telegram-бота.',
+    title: 'Высокая пропускная способность',
+    description: 'Скорость до 300 Мбит/с. Идеально для тяжелого контента и потоковой передачи данных.',
     color: 'from-yellow-400 to-orange-500',
   },
   {
     icon: ShieldCheck,
-    title: 'Протоколы 2025 года',
-    description: 'VLESS-Vision + Reality. Технологии, невидимые для блокировок.',
+    title: 'Шифрование Reality',
+    description: 'Ваш трафик выглядит как обычное посещение зарубежных интернет-магазинов. Полная защита от анализа.',
     color: 'from-blue-400 to-cyan-500',
   },
   {
-    icon: Youtube,
-    title: 'YouTube в 4K',
-    description: 'Никакой буферизации. Идеально для Smart TV.',
+    icon: Lock,
+    title: 'Приватность данных',
+    description: 'Мы не храним логи и историю ваших действий. Ваши данные принадлежат только вам.',
     color: 'from-red-500 to-pink-500',
   },
   {
-    icon: Gamepad2,
-    title: 'Низкий пинг',
-    description: 'Стабильные серверы для геймеров.',
+    icon: Globe,
+    title: 'Глобальный доступ',
+    description: 'Безопасное соединение с серверами в Европе для защиты вашей цифровой личности.',
     color: 'from-purple-400 to-indigo-500',
   },
 ];
