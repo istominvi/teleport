@@ -26,11 +26,11 @@ export default function LocalTrust() {
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
               Разработано в Чите, <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
-                работает для своих.
+                работает на вашу безопасность.
               </span>
             </h2>
             <p className="text-lg leading-8 text-slate-300 mb-8">
-              Мы знаем специфику местного провайдинга. Наши серверы оптимизированы для маршрутов из Забайкалья до Европы и США, обеспечивая минимальную задержку.
+              Мы используем выделенные каналы связи, оптимизированные для стабильной передачи зашифрованного трафика. Никаких лишних посредников между вами и безопасным интернетом.
             </p>
 
             <div className="flex items-center gap-4">
@@ -40,8 +40,8 @@ export default function LocalTrust() {
               </div>
               <div className="h-12 w-px bg-white/10"></div>
               <div className="flex flex-col">
-                <span className="text-5xl font-bold text-white tracking-tight">&lt;50<span className="text-2xl">ms</span></span>
-                <span className="text-sm text-slate-400 uppercase tracking-wider font-semibold mt-1">Ping</span>
+                <span className="text-5xl font-bold text-white tracking-tight">AES-256</span>
+                <span className="text-sm text-slate-400 uppercase tracking-wider font-semibold mt-1">Шифрование</span>
               </div>
             </div>
           </motion.div>
