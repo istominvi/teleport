@@ -34,20 +34,24 @@ const StarryBackground = () => {
     };
 
     const initStars = () => {
-      const starCount = 150;
+      // Reduced star count to ~60-70
+      const starCount = 65;
       stars = [];
-      const colors = ["#ffffff", "#22d3ee", "#a855f7"]; // White, Cyan, Purple
+      // Adjusted colors: White, with subtle hints of Cyan and Purple
+      const colors = ["#ffffff", "#ffffff", "#ffffff", "#e0f2fe", "#f3e8ff"];
 
       for (let i = 0; i < starCount; i++) {
         stars.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          radius: Math.random() * 1.5 + 0.5,
+          // Smaller radius: 0.5px to 1.2px
+          radius: Math.random() * 0.7 + 0.5,
           color: colors[Math.floor(Math.random() * colors.length)],
           opacity: Math.random(),
+          // Very slow velocity: 0.05 to 0.1
           velocity: {
-            x: (Math.random() - 0.5) * 0.2,
-            y: (Math.random() - 0.5) * 0.2,
+            x: (Math.random() - 0.5) * 0.1,
+            y: (Math.random() - 0.5) * 0.1,
           },
           twinkleSpeed: Math.random() * 0.02 + 0.005,
           twinklePhase: Math.random() * Math.PI * 2,
@@ -56,10 +60,10 @@ const StarryBackground = () => {
     };
 
     const draw = () => {
-      // Create deep vertical gradient
+      // Create deep vertical gradient (Deep Midnight Blue/Black)
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-      gradient.addColorStop(0, "#020617"); // slate-950
-      gradient.addColorStop(1, "#1e1b4b"); // darker indigo/purple tone for horizon
+      gradient.addColorStop(0, "#02040a"); // Top: Pure Black/Dark Blue
+      gradient.addColorStop(1, "#0f172a"); // Bottom: Deep Navy (slate-900)
 
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);

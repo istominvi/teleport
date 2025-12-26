@@ -8,10 +8,6 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-4 pt-20 text-center sm:px-6 lg:px-8">
 
-      {/* Background Abstract Element (Glowing Orb) */}
-      <div className="absolute top-1/2 left-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600/20 blur-[100px] sm:h-[800px] sm:w-[800px]" />
-      <div className="absolute top-1/2 left-1/2 -z-10 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[80px]" />
-
       {/* Floating Elements Animation Container */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
