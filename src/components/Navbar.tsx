@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Menu, X, Rocket } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -11,9 +12,9 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const navItems = [
-  { name: 'Преимущества', href: '#features' },
-  { name: 'Тарифы', href: '#pricing' },
-  { name: 'Инструкция', href: '#local-trust' }, // Mapping instruction to LocalTrust for now as it contains setup info usually
+  { name: 'Возможности', href: '#features' },
+  { name: 'Подписка', href: '#pricing' },
+  { name: 'Инструкция', href: '#local-trust' },
 ];
 
 export default function Navbar() {
@@ -30,12 +31,15 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-cyan-500 to-purple-600 shadow-lg shadow-purple-500/20">
-             <Rocket className="h-5 w-5 text-white" />
+          <div className="relative h-10 w-32">
+             <Image
+               src="/logo.png"
+               alt="TelePort™ Logo"
+               fill
+               className="object-contain"
+               priority
+             />
           </div>
-          <span className="bg-gradient-to-r from-white to-slate-400 bg-clip-text text-xl font-bold text-transparent tracking-tight">
-            TelePort™
-          </span>
         </div>
 
         {/* Desktop Navigation */}

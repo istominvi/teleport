@@ -3,6 +3,7 @@
 import React from 'react';
 import { Rocket, PlayCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import UserLocation from './UserLocation';
 
 export default function Hero() {
   return (
@@ -15,19 +16,10 @@ export default function Hero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 flex max-w-4xl flex-col items-center"
       >
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="mb-8 inline-flex items-center rounded-full border border-cyan-500/50 bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-400 backdrop-blur-sm"
-        >
-          <span className="relative flex h-2 w-2 mr-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-          </span>
-          Доступно в Чите и Забайкалье
-        </motion.div>
+        {/* User Location Badge */}
+        <div className="mb-8">
+          <UserLocation />
+        </div>
 
         {/* Headline */}
         <h1 className="mb-6 text-5xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl">
