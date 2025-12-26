@@ -31,12 +31,13 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <div className="relative h-10 w-32">
+          {/* Increased size by ~20% (h-10 to h-12 is 20%, went to h-14 for better prominence as requested "height={48}") */}
+          <div className="relative h-14 w-44">
              <Image
                src="/logo.png"
                alt="TelePort™ Logo"
                fill
-               className="object-contain"
+               className="object-contain object-left"
                priority
              />
           </div>
@@ -57,8 +58,9 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <button className="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-6 font-medium text-white shadow-lg shadow-purple-500/25 transition-all hover:scale-105 hover:shadow-purple-500/40 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-950">
+          <button className="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-full bg-[#020970] px-6 font-medium text-[#00e0f7] shadow-lg shadow-cyan-500/30 transition-all hover:scale-105 hover:bg-gradient-to-r hover:from-[#012bf8] hover:to-[#0366f6] hover:text-white hover:shadow-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-950">
             <span className="relative">Подключить</span>
+            {/* Shimmer effect updated to match new colors if needed, but white/20 is usually safe */}
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform group-hover:animate-shimmer" />
           </button>
         </div>
@@ -67,7 +69,7 @@ export default function Navbar() {
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="inline-flex items-center justify-center rounded-md p-2 text-slate-400 hover:bg-white/5 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500"
+            className="inline-flex items-center justify-center rounded-md p-2 text-slate-400 hover:bg-white/5 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500"
           >
             <span className="sr-only">Open main menu</span>
             {isOpen ? (
@@ -94,7 +96,7 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="mt-4 px-3">
-              <button className="w-full rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 text-center font-medium text-white shadow-lg shadow-purple-500/25 transition-all hover:shadow-purple-500/40">
+              <button className="w-full rounded-full bg-[#020970] text-[#00e0f7] hover:bg-gradient-to-r hover:from-[#012bf8] hover:to-[#0366f6] hover:text-white px-4 py-2 text-center font-medium shadow-lg shadow-cyan-500/30 transition-all hover:shadow-cyan-500/50">
                 Подключить
               </button>
             </div>

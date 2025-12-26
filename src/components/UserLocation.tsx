@@ -39,7 +39,7 @@ export default function UserLocation() {
 
   if (error) {
     return (
-      <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 backdrop-blur-md text-cyan-300 text-sm font-medium shadow-[0_0_15px_rgba(6,182,212,0.15)]">
+      <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-950/30 border border-cyan-500/20 backdrop-blur-md text-cyan-300 text-sm font-medium shadow-[0_0_15px_rgba(6,182,212,0.1)]">
         <Globe className="w-4 h-4 text-cyan-400" />
         <span>📍 TelePort Global Network</span>
       </div>
@@ -48,22 +48,28 @@ export default function UserLocation() {
 
   if (loading) {
     return (
-      <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-slate-300 text-sm font-medium animate-pulse">
-        <Loader2 className="w-4 h-4 animate-spin" />
+      <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-950/50 border border-slate-800 backdrop-blur-md text-slate-300 text-sm font-medium animate-pulse">
+        <Loader2 className="w-4 h-4 animate-spin text-cyan-500" />
         <span>📡 Поиск спутников...</span>
       </div>
     );
   }
 
+  const isIPv6 = data?.ip.includes(':');
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 backdrop-blur-md text-cyan-300 text-sm font-medium shadow-[0_0_15px_rgba(6,182,212,0.15)]"
+      // Updated styling: Darker background (Deep Blue/Black), Cyan border/glow, removed purple
+      className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#02091d]/80 border border-cyan-500/30 backdrop-blur-md text-cyan-100 text-sm font-medium shadow-[0_0_20px_rgba(6,182,212,0.15)]"
     >
-      <MapPin className="w-4 h-4 text-cyan-400" />
+      <MapPin className="w-4 h-4 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
       <span>
-        {data?.city}, {data?.country_name} • <span className="text-cyan-200/70">{data?.ip}</span>
+        {data?.city}, {data?.country_name}
+        {!isIPv6 && (
+          <> • <span className="text-cyan-200/70">{data?.ip}</span></>
+        )}
       </span>
     </motion.div>
   );
