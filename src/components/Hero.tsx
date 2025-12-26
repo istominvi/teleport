@@ -23,15 +23,15 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="mb-6 text-5xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl">
-          Интернет на{' '}
+          Ваш личный защищенный{' '}
           <span className="bg-gradient-to-r from-[#00e0f7] to-[#0366f6] bg-clip-text text-transparent">
-            скорости света.
+            канал связи.
           </span>
         </h1>
 
         {/* Subheadline */}
         <p className="mb-10 max-w-2xl text-lg text-slate-300 sm:text-xl leading-relaxed">
-          Забудь про зависания YouTube в 4K и медленный Instagram. Современные протоколы VLESS + Reality, которые невозможно заблокировать.
+          Максимальная цифровая гигиена. Современные протоколы VLESS + Reality шифруют ваш трафик так, что его невозможно проанализировать или перехватить. Скорость до 300 Мбит/с, полная анонимность и отсутствие логов.
         </p>
 
         {/* Buttons */}

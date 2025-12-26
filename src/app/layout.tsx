@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "TelePort™ VPN - Скоростной и безопасный доступ",
-  description: "Next-generation VPN service for secure and fast internet access.",
+  title: "TelePort™ - Ваш защищенный цифровой канал",
+  description: "Сервис для безопасной передачи данных. Современное шифрование и полная анонимность в сети.",
 };
 
 export default function RootLayout({
