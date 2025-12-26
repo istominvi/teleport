@@ -8,8 +8,8 @@ interface Star {
   radius: number;
   color: string;
   opacity: number;
-  velocity: number; // Base speed, multiplied by depth
-  depth: number;    // 0.1 (far) to 1.0 (near)
+  velocity: number;
+  depth: number;
   twinkleSpeed: number;
   twinklePhase: number;
 }
@@ -35,7 +35,6 @@ const StarryBackground = () => {
     };
 
     const initStars = () => {
-      // Keep quantity ~70
       const starCount = 70;
       stars = [];
       const colors = ["#ffffff", "#ffffff", "#ffffff", "#e0f2fe", "#f3e8ff"];
@@ -45,16 +44,32 @@ const StarryBackground = () => {
         // Using a power curve to have more distant stars than close ones
         const depth = Math.pow(Math.random(), 2) * 0.9 + 0.1;
 
+        // Calculate radius based on depth roughly, but with some variation if needed.
+        // Formula matching previous logic but refined:
+        const radius = depth * 1.0 + 0.5; // Range: ~0.6 to 1.5
+
+        // Determine velocity based on layers logic
+        let velocity = 0;
+
+        if (radius < 0.8) {
+          // Layer 0: Static
+          velocity = 0;
+        } else if (radius < 1.2) {
+          // Layer 1: Mid-range, VERY slow
+          velocity = 0.2;
+        } else {
+          // Layer 2: Foreground, slightly faster but majestic
+          // Previous base was 2.0. We want "slightly faster" than mid-range but "slower than current".
+          velocity = 0.5;
+        }
+
         stars.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          // Radius linked to depth: 0.5px (far) to 1.5px (near)
-          radius: depth * 1.0 + 0.5,
+          radius: radius,
           color: colors[Math.floor(Math.random() * colors.length)],
-          opacity: Math.random() * 0.5 + 0.5, // 0.5 to 1.0 base opacity
-          // Velocity: Base downward speed
-          // The visual speed will be velocity * depth
-          velocity: 2.0,
+          opacity: Math.random() * 0.5 + 0.5,
+          velocity: velocity,
           depth: depth,
           twinkleSpeed: Math.random() * 0.05 + 0.01,
           twinklePhase: Math.random() * Math.PI * 2,
@@ -71,27 +86,39 @@ const StarryBackground = () => {
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Mouse parallax influence (horizontal only usually feels better for vertical flight, but we keep both subtle)
+      // Mouse parallax influence
       const parallaxX = (mouseRef.current.x - canvas.width / 2) * 0.01;
       const parallaxY = (mouseRef.current.y - canvas.height / 2) * 0.01;
 
       stars.forEach((star) => {
         // 2. Update Twinkle
         star.twinklePhase += star.twinkleSpeed;
-        // Subtle twinkling
         const currentOpacity = star.opacity + 0.2 * Math.sin(star.twinklePhase);
         const clampedOpacity = Math.max(0.1, Math.min(1, currentOpacity));
 
-        // 3. Update Position (Warp Speed Effect)
+        // 3. Update Position
         // Move downwards: y increases
-        // Speed depends on depth (closer stars move faster)
-        const speed = star.velocity * star.depth;
-        star.y += speed;
+        // Speed depends on velocity logic defined in initStars.
+        // We can still multiply by depth if we want strictly depth-based speed,
+        // but the prompt gave specific "velocity" targets for layers.
+        // To be safe and "majestic", we use the explicit velocity from initStars
+        // and maybe a small global multiplier if needed.
+        // User asked to "Reduce the global speed multiplier by another 50%".
+        // Let's assume the velocities set in initStars (0.2, 0.5) already account for "majestic".
+        // But previously it was `velocity * depth` where velocity was 2.0.
+        // If depth was 1.0, speed was 2.0. Now max speed is 0.5. That is 25% of previous max.
+        // If depth was 0.5, speed was 1.0. Now mid speed is 0.2. That is 20%.
+        // This satisfies "Reduce global speed... majestic and slow".
+
+        star.y += star.velocity;
 
         // 4. Loop Logic
         if (star.y > canvas.height) {
-          star.y = -10; // Reset to just above top
-          star.x = Math.random() * canvas.width; // New random X
+            // Only recycle moving stars
+            if (star.velocity > 0) {
+                star.y = -10;
+                star.x = Math.random() * canvas.width;
+            }
         }
 
         ctx.beginPath();
