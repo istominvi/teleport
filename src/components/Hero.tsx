@@ -31,7 +31,7 @@ export default function Hero() {
 
         {/* Subheadline */}
         <p className="mb-10 max-w-2xl text-lg text-slate-300 sm:text-xl leading-relaxed">
-          Максимальная цифровая гигиена. Современные протоколы VLESS + Reality шифруют ваш трафик так, что его невозможно проанализировать или перехватить. Скорость до 300 Мбит/с, полная анонимность и отсутствие логов.
+          Максимальная цифровая гигиена. Протоколы VLESS + Reality шифруют ваш трафик, делая его невидимым для анализаторов. Скорость до 300 Мбит/с, полная анонимность и отсутствие логов.
         </p>
 
         {/* Buttons */}
@@ -42,7 +42,7 @@ export default function Hero() {
             className="group relative inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#012bf8] to-[#0366f6] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-cyan-500/30 transition-all hover:shadow-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-950"
           >
             <Rocket className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-            Попробовать бесплатно
+            Подключить защиту
           </motion.button>
 
           <motion.button
