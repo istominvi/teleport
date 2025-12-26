@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import StarryBackground from "@/components/StarryBackground";
 import "./globals.css";
 
 const inter = Inter({
@@ -19,8 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className="dark">
-      <body className={`${inter.variable} antialiased bg-slate-950 text-slate-50 selection:bg-purple-500/30`}>
-        {children}
+      <body
+        className={`${inter.variable} antialiased bg-slate-950 text-slate-50 selection:bg-purple-500/30`}
+      >
+        <StarryBackground />
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );
