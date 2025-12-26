@@ -3,14 +3,18 @@
 import React from 'react';
 import Link from 'next/link';
 import { Menu, X, Rocket } from 'lucide-react';
-// import { cn } from '@/lib/utils';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+
+const navItems = [
+  { name: 'Преимущества', href: '#features' },
+  { name: 'Тарифы', href: '#pricing' },
+  { name: 'Инструкция', href: '#local-trust' }, // Mapping instruction to LocalTrust for now as it contains setup info usually
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -20,10 +24,12 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-slate-950/50 backdrop-blur-md">
+    <header className={cn(
+      "fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-slate-950/50 backdrop-blur-md transition-all duration-300"
+    )}>
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-cyan-500 to-purple-600 shadow-lg shadow-purple-500/20">
              <Rocket className="h-5 w-5 text-white" />
           </div>
@@ -34,13 +40,13 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex md:items-center md:gap-8">
-          {['Преимущества', 'Тарифы', 'Инструкция'].map((item) => (
+          {navItems.map((item) => (
             <Link
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.name}
+              href={item.href}
               className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
             >
-              {item}
+              {item.name}
             </Link>
           ))}
         </nav>
@@ -73,14 +79,14 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 bg-slate-950/90 backdrop-blur-xl border-b border-white/10">
-            {['Преимущества', 'Тарифы', 'Инструкция'].map((item) => (
+            {navItems.map((item) => (
               <Link
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.name}
+                href={item.href}
                 className="block rounded-md px-3 py-2 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white"
                 onClick={() => setIsOpen(false)}
               >
-                {item}
+                {item.name}
               </Link>
             ))}
             <div className="mt-4 px-3">
