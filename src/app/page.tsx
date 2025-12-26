@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import LocalTrust from "@/components/LocalTrust";
+import Steps from "@/components/Steps";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Features />
       <LocalTrust />
+      <Steps />
       <Pricing />
       <Footer />
     </main>
