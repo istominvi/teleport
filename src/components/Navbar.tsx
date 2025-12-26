@@ -31,7 +31,6 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          {/* Increased size by ~20% (h-10 to h-12 is 20%, went to h-14 for better prominence as requested "height={48}") */}
           <div className="relative h-14 w-44">
              <Image
                src="/logo.png"
@@ -58,10 +57,10 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <button className="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-full bg-[#020970] px-6 font-medium text-[#00e0f7] shadow-lg shadow-cyan-500/30 transition-all hover:scale-105 hover:bg-gradient-to-r hover:from-[#012bf8] hover:to-[#0366f6] hover:text-white hover:shadow-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-950">
+          <button className="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-full border border-cyan-500/30 bg-slate-900/60 backdrop-blur-md px-6 font-medium text-cyan-50 transition-all duration-300 ease-out hover:border-cyan-400 hover:bg-cyan-500/10 hover:text-white hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-950">
             <span className="relative">Подключить</span>
-            {/* Shimmer effect updated to match new colors if needed, but white/20 is usually safe */}
-            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform group-hover:animate-shimmer" />
+            {/* Subtle shimmer for glass effect */}
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent transition-transform group-hover:animate-shimmer" />
           </button>
         </div>
 
@@ -96,7 +95,8 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="mt-4 px-3">
-              <button className="w-full rounded-full bg-[#020970] text-[#00e0f7] hover:bg-gradient-to-r hover:from-[#012bf8] hover:to-[#0366f6] hover:text-white px-4 py-2 text-center font-medium shadow-lg shadow-cyan-500/30 transition-all hover:shadow-cyan-500/50">
+              {/* Mobile CTA matching desktop style */}
+              <button className="w-full rounded-full border border-cyan-500/30 bg-slate-900/60 backdrop-blur-md px-4 py-2 text-center font-medium text-cyan-50 transition-all duration-300 ease-out hover:border-cyan-400 hover:bg-cyan-500/10 hover:text-white hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]">
                 Подключить
               </button>
             </div>
