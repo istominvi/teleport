@@ -34,7 +34,7 @@ export default function Navbar() {
           <div className="relative h-14 w-44">
              <Image
                src="/logo.png"
-               alt="TelePort™ Logo"
+               alt="TelePort Logo"
                fill
                className="object-contain object-left"
                priority

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Server, MapPin } from 'lucide-react';
+import { Server, Globe } from 'lucide-react';
 
 export default function LocalTrust() {
   return (
@@ -20,17 +20,17 @@ export default function LocalTrust() {
             viewport={{ once: true }}
           >
             <div className="inline-flex items-center rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-400 mb-6">
-              <MapPin className="mr-2 h-4 w-4" />
-              Локальная оптимизация
+              <Globe className="mr-2 h-4 w-4" />
+              Глобальная сеть
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
-              Разработано в Чите, <br />
+              Глобальная архитектура безопасности. <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
-                работает для своих.
+                Ваши данные под надежной защитой.
               </span>
             </h2>
             <p className="text-lg leading-8 text-slate-300 mb-8">
-              Мы знаем специфику местного провайдинга. Наши серверы оптимизированы для маршрутов из Забайкалья до Европы и США, обеспечивая минимальную задержку.
+              Мы используем децентрализованную сеть серверов для создания зашифрованного туннеля. Ваш трафик маршрутизируется через защищенные узлы, исключая возможность перехвата или анализа третьими лицами.
             </p>
 
             <div className="flex items-center gap-4">
@@ -40,8 +40,8 @@ export default function LocalTrust() {
               </div>
               <div className="h-12 w-px bg-white/10"></div>
               <div className="flex flex-col">
-                <span className="text-5xl font-bold text-white tracking-tight">&lt;50<span className="text-2xl">ms</span></span>
-                <span className="text-sm text-slate-400 uppercase tracking-wider font-semibold mt-1">Ping</span>
+                <span className="text-5xl font-bold text-white tracking-tight">AES-256</span>
+                <span className="text-sm text-slate-400 uppercase tracking-wider font-semibold mt-1">Шифрование</span>
               </div>
             </div>
           </motion.div>
@@ -57,7 +57,7 @@ export default function LocalTrust() {
                {/* Abstract Network Map */}
                <div className="absolute inset-0 flex items-center justify-center">
 
-                  {/* Central Node (Chita) */}
+                  {/* Central Node (Client) */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                      <div className="relative flex h-16 w-16 items-center justify-center">
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-20"></span>
@@ -65,7 +65,7 @@ export default function LocalTrust() {
                             <Server className="h-4 w-4 text-white" />
                         </div>
                      </div>
-                     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 text-xs font-mono text-cyan-400">CHITA</div>
+                     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 text-xs font-mono text-cyan-400">CLIENT</div>
                   </div>
 
                   {/* Connected Nodes (Abstract) */}
