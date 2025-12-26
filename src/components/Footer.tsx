@@ -43,7 +43,7 @@ export default function Footer() {
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs leading-5 text-slate-500">
-                © 2025 TelePort™. Сервис защищенной передачи данных.
+                © 2025 TelePort™. Приватный цифровой шлюз.
             </p>
         </div>
       </div>
