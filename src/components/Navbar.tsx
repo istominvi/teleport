@@ -7,6 +7,7 @@ import { Menu, X, Rocket } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
