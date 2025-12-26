@@ -1,13 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { MapPin, Loader2, Globe } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 interface LocationData {
-  city: string;
-  country_name: string;
   ip: string;
+  city: string;
+  country: string;
+  success: boolean;
 }
 
 export default function UserLocation() {
@@ -18,18 +17,23 @@ export default function UserLocation() {
   useEffect(() => {
     const fetchLocation = async () => {
       try {
-        const response = await fetch('https://ipapi.co/json/');
-        if (!response.ok) throw new Error('Failed to fetch location');
-        const jsonData = await response.json();
-        setData({
-          city: jsonData.city || 'Unknown City',
-          country_name: jsonData.country_name || 'Unknown Country',
-          ip: jsonData.ip || 'Unknown IP',
-        });
-      } catch (err) {
-        console.error('Error fetching location:', err);
+        const response = await fetch('https://ipwho.is/');
+
+        if (!response.ok) {
+           throw new Error('Network response was not ok');
+        }
+
+        const json = await response.json();
+
+        // ipwho.is returns success: false if something is wrong (e.g. invalid IP reserved range)
+        if (json.success === false) {
+           throw new Error('API returned success: false');
+        }
+
+        setData(json);
+        setLoading(false);
+      } catch {
         setError(true);
-      } finally {
         setLoading(false);
       }
     };
@@ -37,40 +41,31 @@ export default function UserLocation() {
     fetchLocation();
   }, []);
 
-  if (error) {
-    return (
-      <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-950/30 border border-cyan-500/20 backdrop-blur-md text-cyan-300 text-sm font-medium shadow-[0_0_15px_rgba(6,182,212,0.1)]">
-        <Globe className="w-4 h-4 text-cyan-400" />
-        <span>📍 TelePort Global Network</span>
-      </div>
-    );
-  }
+  // Shared container styles
+  const containerClasses = "inline-flex items-center px-4 py-2 rounded-full border backdrop-blur-md bg-slate-900/80 border-cyan-500/30 text-cyan-400 font-mono text-sm";
 
   if (loading) {
     return (
-      <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-950/50 border border-slate-800 backdrop-blur-md text-slate-300 text-sm font-medium animate-pulse">
-        <Loader2 className="w-4 h-4 animate-spin text-cyan-500" />
-        <span>📡 Поиск спутников...</span>
+      <div className={`${containerClasses} animate-pulse`}>
+        ⚡ Анализ маршрута...
       </div>
     );
   }
 
-  const isIPv6 = data?.ip.includes(':');
+  if (error || !data) {
+    return (
+      <div className={containerClasses}>
+        🌐 TelePort Global Network
+      </div>
+    );
+  }
+
+  const isIPv6 = data.ip.includes(':');
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      // Updated styling: Darker background (Deep Blue/Black), Cyan border/glow, removed purple
-      className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#02091d]/80 border border-cyan-500/30 backdrop-blur-md text-cyan-100 text-sm font-medium shadow-[0_0_20px_rgba(6,182,212,0.15)]"
-    >
-      <MapPin className="w-4 h-4 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
-      <span>
-        {data?.city}, {data?.country_name}
-        {!isIPv6 && (
-          <> • <span className="text-cyan-200/70">{data?.ip}</span></>
-        )}
-      </span>
-    </motion.div>
+    <div className={containerClasses}>
+      📍 {data.city}, {data.country}
+      {!isIPv6 && ` • ${data.ip}`}
+    </div>
   );
 }
