@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "TelePort™ - Защищенный канал связи",
-  description: "Сервис для безопасной передачи данных. Современное шифрование и анонимность.",
+  title: "TelePort™ - Ваш защищенный цифровой канал",
+  description: "Сервис для безопасной передачи данных. Современное шифрование и полная анонимность в сети.",
 };
 
 export default function RootLayout({

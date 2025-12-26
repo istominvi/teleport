@@ -1,33 +1,33 @@
 'use client';
 
 import React from 'react';
-import { Zap, ShieldCheck, Lock, Globe } from 'lucide-react';
+import { Zap, ShieldCheck, Lock, Bot } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const features = [
   {
     icon: Zap,
-    title: 'Высокая пропускная способность',
-    description: 'Скорость до 300 Мбит/с. Идеально для тяжелого контента и потоковой передачи данных.',
+    title: 'Высокая скорость',
+    description: 'Канал до 300 Мбит/с. Стабильная работа с тяжелыми файлами и потоковым видео.',
     color: 'from-yellow-400 to-orange-500',
   },
   {
     icon: ShieldCheck,
-    title: 'Шифрование Reality',
-    description: 'Ваш трафик выглядит как обычное посещение зарубежных интернет-магазинов. Полная защита от анализа.',
+    title: 'Протоколы Stealth',
+    description: 'VLESS + Reality маскируют ваш трафик под обычный веб-серфинг. Невозможно обнаружить использование защиты.',
     color: 'from-blue-400 to-cyan-500',
   },
   {
     icon: Lock,
-    title: 'Приватность данных',
-    description: 'Мы не храним логи и историю ваших действий. Ваши данные принадлежат только вам.',
+    title: 'Полная анонимность',
+    description: 'Мы не храним логи подключений и историю активности. Приватность по умолчанию.',
     color: 'from-red-500 to-pink-500',
   },
   {
-    icon: Globe,
-    title: 'Глобальный доступ',
-    description: 'Безопасное соединение с серверами в Европе для защиты вашей цифровой личности.',
-    color: 'from-purple-400 to-indigo-500',
+    icon: Bot,
+    title: 'Управление через Telegram',
+    description: 'Удобный бот @teleport_xbot для получения ключей и управления подпиской.',
+    color: 'from-sky-400 to-blue-500',
   },
 ];
 
