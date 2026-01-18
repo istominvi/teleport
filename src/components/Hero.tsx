@@ -1,9 +1,10 @@
 'use client';
 
 import React from 'react';
-import { Rocket, PlayCircle } from 'lucide-react';
+import { Bot, BookUser } from 'lucide-react';
 import { motion } from 'framer-motion';
 import UserLocation from './UserLocation';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -23,36 +24,41 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="mb-6 text-5xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl">
-          Интернет на{' '}
+          YouTube в 4K и{' '}
           <span className="bg-gradient-to-r from-[#00e0f7] to-[#0366f6] bg-clip-text text-transparent">
-            скорости света.
+            Instagram
           </span>
+          {' '}без ожиданий.
         </h1>
 
         {/* Subheadline */}
         <p className="mb-10 max-w-2xl text-lg text-slate-300 sm:text-xl leading-relaxed">
-          Забудь про зависания YouTube в 4K и медленный Instagram. Современные протоколы VLESS + Reality, которые невозможно заблокировать.
+        Современный VPN на базе VLESS + Reality. Не сажает батарею, не режет скорость, работает там, где другие заблокированы. Оплата любой картой РФ.
         </p>
 
         {/* Buttons */}
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="group relative inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#012bf8] to-[#0366f6] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-cyan-500/30 transition-all hover:shadow-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-950"
-          >
-            <Rocket className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-            Попробовать бесплатно
-          </motion.button>
+          <Link href="https://t.me/teleport_vpn_bot" target='_blank'>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group relative inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#012bf8] to-[#0366f6] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-cyan-500/30 transition-all hover:shadow-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-950"
+            >
+              <Bot className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+              Подключить через Telegram
+            </motion.button>
+          </Link>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="group inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-white/5 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-slate-500 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-950"
-          >
-            <PlayCircle className="h-5 w-5 text-slate-300 transition-colors group-hover:text-white" />
-            Как это работает?
-          </motion.button>
+          <Link href="#local-trust">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-white/5 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-slate-500 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-950"
+            >
+              <BookUser className="h-5 w-5 text-slate-300 transition-colors group-hover:text-white" />
+              Инструкция по настройке
+            </motion.button>
+          </Link>
         </div>
       </motion.div>
     </section>
