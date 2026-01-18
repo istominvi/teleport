@@ -7,20 +7,20 @@ import { motion } from 'framer-motion';
 const steps = [
   {
     icon: Bot,
-    title: 'Запусти бота',
-    description: 'Перейди в Telegram.',
+    title: 'Запустите бота',
+    description: 'Нажмите Start в Telegram боте TelePort.',
     color: 'from-cyan-400 to-blue-500',
   },
   {
     icon: CreditCard,
-    title: 'Выбери тариф',
-    description: 'Оплата любой картой РФ.',
+    title: 'Оплатите подписку',
+    description: 'Удобная оплата через СБП или картой прямо в чате.',
     color: 'from-purple-400 to-pink-500',
   },
   {
     icon: Power,
-    title: 'Включи TelePort',
-    description: 'Одна кнопка в приложении v2RayTun.',
+    title: 'Вставьте ключ',
+    description: 'Скачайте приложение v2RayTun и вставьте полученный ключ доступа.',
     color: 'from-orange-400 to-red-500',
   },
 ];
