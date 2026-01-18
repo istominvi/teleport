@@ -2,11 +2,3 @@
 > teleport-vpn@0.1.0 dev
 > next dev
 
-▲ Next.js 16.1.1 (Turbopack)
-- Local:         http://localhost:3000
-- Network:       http://192.168.0.2:3000
-
-✓ Starting...
-✓ Ready in 1065ms
-○ Compiling / ...
- GET / 200 in 8.0s (compile: 7.3s, render: 682ms)
