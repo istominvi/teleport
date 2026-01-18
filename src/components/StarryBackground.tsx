@@ -8,7 +8,6 @@ interface Star {
   radius: number;
   color: string;
   opacity: number;
-  velocity: number;
   depth: number;
   twinkleSpeed: number;
   twinklePhase: number;
@@ -35,7 +34,7 @@ const StarryBackground = () => {
     };
 
     const initStars = () => {
-      const starCount = 70;
+      const starCount = 200;
       stars = [];
       const colors = ["#ffffff", "#ffffff", "#ffffff", "#e0f2fe", "#f3e8ff"];
 
@@ -48,28 +47,12 @@ const StarryBackground = () => {
         // Formula matching previous logic but refined:
         const radius = depth * 1.0 + 0.5; // Range: ~0.6 to 1.5
 
-        // Determine velocity based on layers logic
-        let velocity = 0;
-
-        if (radius < 0.8) {
-          // Layer 0: Static
-          velocity = 0;
-        } else if (radius < 1.2) {
-          // Layer 1: Mid-range, VERY slow
-          velocity = 0.2;
-        } else {
-          // Layer 2: Foreground, slightly faster but majestic
-          // Previous base was 2.0. We want "slightly faster" than mid-range but "slower than current".
-          velocity = 0.5;
-        }
-
         stars.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           radius: radius,
           color: colors[Math.floor(Math.random() * colors.length)],
           opacity: Math.random() * 0.5 + 0.5,
-          velocity: velocity,
           depth: depth,
           twinkleSpeed: Math.random() * 0.05 + 0.01,
           twinklePhase: Math.random() * Math.PI * 2,
@@ -96,30 +79,7 @@ const StarryBackground = () => {
         const currentOpacity = star.opacity + 0.2 * Math.sin(star.twinklePhase);
         const clampedOpacity = Math.max(0.1, Math.min(1, currentOpacity));
 
-        // 3. Update Position
-        // Move downwards: y increases
-        // Speed depends on velocity logic defined in initStars.
-        // We can still multiply by depth if we want strictly depth-based speed,
-        // but the prompt gave specific "velocity" targets for layers.
-        // To be safe and "majestic", we use the explicit velocity from initStars
-        // and maybe a small global multiplier if needed.
-        // User asked to "Reduce the global speed multiplier by another 50%".
-        // Let's assume the velocities set in initStars (0.2, 0.5) already account for "majestic".
-        // But previously it was `velocity * depth` where velocity was 2.0.
-        // If depth was 1.0, speed was 2.0. Now max speed is 0.5. That is 25% of previous max.
-        // If depth was 0.5, speed was 1.0. Now mid speed is 0.2. That is 20%.
-        // This satisfies "Reduce global speed... majestic and slow".
-
-        star.y += star.velocity;
-
-        // 4. Loop Logic
-        if (star.y > canvas.height) {
-            // Only recycle moving stars
-            if (star.velocity > 0) {
-                star.y = -10;
-                star.x = Math.random() * canvas.width;
-            }
-        }
+        // 3. Update Position - Static sky, no movement
 
         ctx.beginPath();
         // Draw star
