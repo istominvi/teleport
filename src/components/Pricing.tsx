@@ -5,20 +5,31 @@ import { motion } from 'framer-motion';
 
 const plans = [
   {
-    name: 'Старт',
-    price: '150₽',
+    name: 'Месяц',
+    price: '99₽',
     period: '/мес',
-    features: ['1 Устройство', '100 ГБ трафика'],
+    features: [
+      'Безлимитный трафик',
+      'Высокая скорость (до 1 Гбит/с)',
+      'До 5 устройств',
+      'Протоколы VLESS + Reality',
+    ],
     highlight: false,
-    buttonText: 'Выбрать',
+    buttonText: 'Начать',
   },
   {
-    name: 'PRO',
-    price: '250₽',
-    period: '/мес',
-    features: ['5 Устройств', 'Безлимит', 'Максимальная скорость'],
+    name: 'Год',
+    price: '990₽',
+    period: '/год',
+    features: [
+      'Безлимитный трафик',
+      'Высокая скорость (до 1 Гбит/с)',
+      'До 5 устройств',
+      'Протоколы VLESS + Reality',
+      'Выгода 17%',
+    ],
     highlight: true,
-    buttonText: 'Выбрать PRO',
+    buttonText: 'Выбрать',
   },
 ];
 
