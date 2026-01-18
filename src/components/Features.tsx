@@ -1,33 +1,33 @@
 'use client';
 
 import React from 'react';
-import { Zap, ShieldCheck, Youtube, Gamepad2 } from 'lucide-react';
+import { CreditCard, ShieldCheck, Zap, Smartphone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const features = [
   {
-    icon: Zap,
-    title: 'Мгновенное подключение',
-    description: 'Ключ доступа за 1 минуту через Telegram-бота.',
-    color: 'from-yellow-400 to-orange-500',
+    icon: CreditCard,
+    title: 'Оплата картой РФ',
+    description: 'Принимаем карты любых российских банков и СБП. Не нужно искать крипту.',
+    color: 'from-green-400 to-teal-500',
   },
   {
     icon: ShieldCheck,
-    title: 'Протоколы 2025 года',
-    description: 'VLESS-Vision + Reality. Технологии, невидимые для блокировок.',
+    title: 'Невидимый протокол',
+    description: 'Используем VLESS-Reality. Ваш трафик выглядит как обычный просмотр сайтов, поэтому его сложно заблокировать.',
     color: 'from-blue-400 to-cyan-500',
   },
   {
-    icon: Youtube,
-    title: 'YouTube в 4K',
-    description: 'Никакой буферизации. Идеально для Smart TV.',
-    color: 'from-red-500 to-pink-500',
+    icon: Zap,
+    title: 'Скорость до 1 Гбит/с',
+    description: 'Смотрите стримы и видео в 4K без буферизации.',
+    color: 'from-yellow-400 to-orange-500',
   },
   {
-    icon: Gamepad2,
-    title: 'Низкий пинг',
-    description: 'Стабильные серверы для геймеров.',
-    color: 'from-purple-400 to-indigo-500',
+    icon: Smartphone,
+    title: 'Простая настройка',
+    description: 'Клиент v2RayTun. Одна ссылка-ключ для подключения. Работает на iOS и Android.',
+    color: 'from-sky-400 to-blue-500',
   },
 ];
 
