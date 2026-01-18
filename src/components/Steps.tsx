@@ -90,7 +90,13 @@ export default function Steps() {
               </div>
 
               <h3 className="text-xl font-bold text-white mb-2">
-                {step.title}
+                {index === 0 ? (
+                  <Link href="https://t.me/teleport_xbot" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    {step.title}
+                  </Link>
+                ) : (
+                  step.title
+                )}
               </h3>
               <p className="text-slate-400">
                 {step.description}

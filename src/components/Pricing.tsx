@@ -82,15 +82,18 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <button
-                className={`w-full py-4 rounded-xl font-bold transition-all duration-300 ${
+              <Link
+                href="https://t.me/teleport_xbot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block text-center w-full py-4 rounded-xl font-bold transition-all duration-300 ${
                   plan.highlight
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:scale-[1.02]'
                     : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
                 }`}
               >
                 {plan.buttonText}
-              </button>
+              </Link>
             </motion.div>
           ))}
         </div>

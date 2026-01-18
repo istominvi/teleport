@@ -57,11 +57,11 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <button className="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-full border border-cyan-500/30 bg-slate-900/60 backdrop-blur-md px-6 font-medium text-cyan-50 transition-all duration-300 ease-out hover:border-cyan-400 hover:bg-cyan-500/10 hover:text-white hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-950">
+          <Link href="https://t.me/teleport_xbot" target="_blank" rel="noopener noreferrer" className="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-full border border-cyan-500/30 bg-slate-900/60 backdrop-blur-md px-6 font-medium text-cyan-50 transition-all duration-300 ease-out hover:border-cyan-400 hover:bg-cyan-500/10 hover:text-white hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-950">
             <span className="relative">Подключить</span>
             {/* Subtle shimmer for glass effect */}
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent transition-transform group-hover:animate-shimmer" />
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -96,9 +96,9 @@ export default function Navbar() {
             ))}
             <div className="mt-4 px-3">
               {/* Mobile CTA matching desktop style */}
-              <button className="w-full rounded-full border border-cyan-500/30 bg-slate-900/60 backdrop-blur-md px-4 py-2 text-center font-medium text-cyan-50 transition-all duration-300 ease-out hover:border-cyan-400 hover:bg-cyan-500/10 hover:text-white hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]">
+              <Link href="https://t.me/teleport_xbot" target="_blank" rel="noopener noreferrer" className="block w-full rounded-full border border-cyan-500/30 bg-slate-900/60 backdrop-blur-md px-4 py-2 text-center font-medium text-cyan-50 transition-all duration-300 ease-out hover:border-cyan-400 hover:bg-cyan-500/10 hover:text-white hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]">
                 Подключить
-              </button>
+              </Link>
             </div>
           </div>
         </div>
