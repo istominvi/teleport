@@ -45,18 +45,7 @@ export default function Hero() {
               className="group relative inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#012bf8] to-[#0366f6] px-8 py-4 text-lg font-semibold text-white transition-all focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-950"
             >
               <Bot className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-              Подключить VPN
-            </motion.button>
-          </Link>
-
-          <Link href="#local-trust">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="group inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-white/5 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-slate-500 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-950"
-            >
-              <BookUser className="h-5 w-5 text-slate-300 transition-colors group-hover:text-white" />
-              Инструкция по настройке
+              Подключить через наш Telegram бот
             </motion.button>
           </Link>
         </div>
