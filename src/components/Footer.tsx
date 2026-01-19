@@ -17,6 +17,9 @@ export default function Footer() {
             {/* Links */}
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium text-slate-400">
                 <Link href="#" className="hover:text-white transition-colors">
+                    Политика
+                </Link>
+                <Link href="#" className="hover:text-white transition-colors">
                     Публичная оферта
                 </Link>
                 <Link href="https://t.me/teleport_support" className="hover:text-white transition-colors flex items-center gap-2">
