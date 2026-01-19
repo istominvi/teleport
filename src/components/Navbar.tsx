@@ -13,8 +13,7 @@ function cn(...inputs: ClassValue[]) {
 
 const navItems = [
   { name: 'Возможности', href: '#features' },
-  { name: 'Подписка', href: '#pricing' },
-  { name: 'Инструкция', href: '#local-trust' },
+  { name: 'Тарифы', href: '#pricing' },
 ];
 
 export default function Navbar() {
