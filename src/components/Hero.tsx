@@ -38,7 +38,7 @@ export default function Hero() {
 
         {/* Buttons */}
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
-          <Link href="https://t.me/teleport_vpn_bot" target='_blank'>
+          <Link href="https://t.me/teleport_xbot" target='_blank'>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
