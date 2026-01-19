@@ -30,15 +30,6 @@ export default function Footer() {
                 </Link>
             </div>
 
-             {/* Social Icon */}
-             <Link
-                href="https://t.me/teleport_vpn"
-                className="group relative flex h-10 w-10 items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors"
-                aria-label="Telegram"
-             >
-                 <Send className="h-5 w-5 text-slate-400 group-hover:text-[#229ED9] transition-colors" />
-             </Link>
-
         </div>
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
