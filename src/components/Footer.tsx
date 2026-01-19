@@ -10,16 +10,26 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
 
             {/* Copyright */}
-            <p className="copyright-text text-xs leading-5 text-slate-500">
+            <p className="text-sm font-medium text-slate-400">
                 © 2025 TelePort™. Приватный цифровой шлюз.
             </p>
 
             {/* Links */}
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium text-slate-400">
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link
+                    href="https://telegra.ph/POLITIKA-V-OTNOSHENII-OBRABOTKI-PERSONALNYH-DANNYH-01-18"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors"
+                >
                     Политика
                 </Link>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link
+                    href="https://telegra.ph/PUBLICHNAYA-OFERTA-na-zaklyuchenie-licenzionnogo-dogovora-01-18"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors"
+                >
                     Публичная оферта
                 </Link>
                 <Link href="https://t.me/teleport_support" className="hover:text-white transition-colors flex items-center gap-2">
