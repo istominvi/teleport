@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Server } from 'lucide-react';
+import { Server, User, Globe } from 'lucide-react';
 
 export default function LocalTrust() {
   return (
@@ -41,34 +41,72 @@ export default function LocalTrust() {
             className="relative"
           >
             <div className="relative aspect-square md:aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-950/50 backdrop-blur-xl">
-               {/* Abstract Network Map */}
-               <div className="absolute inset-0 flex items-center justify-center">
+               {/* Network Flow */}
+               <div className="absolute inset-0 flex items-center justify-between p-8 md:p-12">
 
-                  {/* Central Node (Chita) */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                     <div className="relative flex h-16 w-16 items-center justify-center">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-20"></span>
-                        <div className="relative inline-flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500 shadow-[0_0_20px_rgba(6,182,212,0.5)]">
-                            <Server className="h-4 w-4 text-white" />
-                        </div>
+                  {/* User Node */}
+                  <div className="flex flex-col items-center z-10">
+                     <div className="relative inline-flex h-12 w-12 items-center justify-center rounded-full bg-purple-500/80 shadow-[0_0_20px_rgba(168,85,247,0.5)]">
+                        <User className="h-6 w-6 text-white" />
                      </div>
-                     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 text-xs font-mono text-cyan-400">CLIENT</div>
+                     <div className="mt-2 text-xs font-mono text-purple-400">Пользователь</div>
                   </div>
 
-                  {/* Connected Nodes (Abstract) */}
-                  {[0, 120, 240].map((deg) => (
-                      <div key={deg} className="absolute top-1/2 left-1/2 h-[120px] w-[1px] origin-top bg-gradient-to-b from-cyan-500/50 to-transparent" style={{ transform: `rotate(${deg}deg)` }}>
-                         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-                            <div className="h-3 w-3 rounded-full bg-purple-500 shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
-                         </div>
-                      </div>
-                  ))}
+                  {/* Teleport Node (Center) */}
+                  <div className="flex flex-col items-center z-10">
+                     <div className="relative flex h-16 w-16 items-center justify-center">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-20"></span>
+                        <div className="relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-cyan-500 shadow-[0_0_20px_rgba(6,182,212,0.5)]">
+                           <Server className="h-5 w-5 text-white" />
+                        </div>
+                     </div>
+                     <div className="mt-2 text-xs font-mono text-cyan-400">TelePort</div>
+                  </div>
 
-                  {/* Orbiting particles */}
-                   <div className="absolute inset-0 animate-[spin_10s_linear_infinite]">
-                      <div className="absolute top-1/4 left-1/4 h-2 w-2 rounded-full bg-white/20 blur-sm"></div>
-                      <div className="absolute bottom-1/4 right-1/4 h-2 w-2 rounded-full bg-white/20 blur-sm"></div>
-                   </div>
+                  {/* Internet Node */}
+                  <div className="flex flex-col items-center z-10">
+                     <div className="relative inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-500/80 shadow-[0_0_20px_rgba(34,197,94,0.5)]">
+                        <Globe className="h-6 w-6 text-white" />
+                     </div>
+                     <div className="mt-2 text-xs font-mono text-green-400">Интернет</div>
+                  </div>
+
+                  {/* Signal Animations */}
+                  <motion.div
+                    className="absolute top-1/2 left-0 w-2 h-2 rounded-full bg-purple-400"
+                    style={{
+                      left: 'calc(15% + 12px)',
+                      right: 'auto',
+                      y: '-50%',
+                    }}
+                    animate={{
+                      left: 'calc(50% - 12px)',
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      repeatType: 'loop',
+                      ease: 'linear',
+                    }}
+                  />
+                  <motion.div
+                    className="absolute top-1/2 left-1/2 w-2 h-2 rounded-full bg-cyan-400"
+                     style={{
+                      left: 'calc(50% + 12px)',
+                      right: 'auto',
+                      y: '-50%',
+                    }}
+                    animate={{
+                      left: 'calc(85% - 12px)',
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      repeatType: 'loop',
+                      ease: 'linear',
+                      delay: 0.2
+                    }}
+                  />
 
                </div>
 
