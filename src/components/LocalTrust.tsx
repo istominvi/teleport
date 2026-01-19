@@ -7,9 +7,6 @@ import { Server } from 'lucide-react';
 export default function LocalTrust() {
   return (
     <section id="local-trust" className="relative overflow-hidden py-24 sm:py-32 bg-slate-900/50">
-        {/* Background Grid Accent */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24 items-center">
 

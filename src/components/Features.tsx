@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { CreditCard, ShieldCheck, Zap, Smartphone } from 'lucide-react';
+import { CreditCard, ShieldCheck, Zap, Smartphone, Users, Globe, ShieldOff } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const features = [
@@ -14,7 +14,7 @@ const features = [
   {
     icon: ShieldCheck,
     title: 'Невидимый протокол',
-    description: 'Используем VLESS-Reality. Ваш трафик выглядит как обычный просмотр сайтов, поэтому его сложно заблокировать.',
+    description: 'Используем VLESS протоколы. Ваш трафик выглядит как обычный просмотр сайтов, поэтому его сложно заблокировать.',
     color: 'from-blue-400 to-cyan-500',
   },
   {
@@ -29,6 +29,24 @@ const features = [
     description: 'Клиент v2RayTun. Одна ссылка-ключ для подключения. Работает на iOS и Android.',
     color: 'from-sky-400 to-blue-500',
   },
+  {
+    icon: Users,
+    title: 'Несколько устройств',
+    description: 'Используйте одну подписку на всех ваших устройствах: телефоне, ноутбуке и планшете.',
+    color: 'from-purple-400 to-pink-500',
+  },
+  {
+    icon: Globe,
+    title: 'Смена страны',
+    description: 'Подключайтесь через серверы в разных странах для обхода региональных блокировок.',
+    color: 'from-indigo-400 to-violet-500',
+  },
+  {
+    icon: ShieldOff,
+    title: 'Конфиденциальность',
+    description: 'Мы не храним логи и не отслеживаем вашу активность. Ваша приватность защищена.',
+    color: 'from-rose-400 to-red-500',
+  }
 ];
 
 const container = {
@@ -66,7 +84,7 @@ export default function Features() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
           {features.map((feature) => (
             <motion.div
