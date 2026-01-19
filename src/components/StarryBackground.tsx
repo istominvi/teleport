@@ -34,7 +34,7 @@ const StarryBackground = () => {
     };
 
     const initStars = () => {
-      const starCount = 200;
+      const starCount = 100;
       stars = [];
       const colors = ["#ffffff", "#ffffff", "#ffffff", "#e0f2fe", "#f3e8ff"];
 
