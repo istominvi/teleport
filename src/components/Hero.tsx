@@ -42,7 +42,7 @@ export default function Hero() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#012bf8] to-[#0366f6] px-8 py-4 text-lg font-semibold text-white transition-all focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-950"
+              className="group relative inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#00e0f7] to-[#0366f6] px-8 py-4 text-lg font-semibold text-white transition-all focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-950"
             >
               <Bot className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               Подключить через наш Telegram бот
