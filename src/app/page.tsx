@@ -10,12 +10,19 @@ export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col">
       <Navbar />
-      <Hero />
-      <Features />
-      <LocalTrust />
-      <Steps />
-      <Pricing />
-      <Footer />
+      <div
+        style={{
+          maskImage: 'linear-gradient(to bottom, transparent 0%, black 80px)',
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 80px)',
+        }}
+      >
+        <Hero />
+        <Features />
+        <LocalTrust />
+        <Steps />
+        <Pricing />
+        <Footer />
+      </div>
     </main>
   );
 }
