@@ -23,10 +23,6 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
 
-  const isProd = process.env.NODE_ENV === 'production';
-  const repoName = 'teleport';
-  const logoPath = isProd ? `/${repoName}/logo.png` : '/logo.png';
-
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300"
@@ -36,7 +32,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <div className="relative h-11 w-36">
              <Image
-               src={logoPath}
+               src="/logo.png"
                alt="TelePort™ Logo"
                fill
                className="object-contain object-left"
