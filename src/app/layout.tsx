@@ -40,11 +40,6 @@ export const metadata: Metadata = {
     description: "Скачать VPN, который работает в России. Протокол VLESS-Reality маскирует трафик под обычный сайт. YouTube в 4K, Instagram без зависаний. Оплата картой РФ (СБП) от 99₽. Мгновенное подключение через Telegram.",
     images: ["/og-image.png"],
   },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
-  },
 };
 
 export const viewport: Viewport = {
