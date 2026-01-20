@@ -12,32 +12,32 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.teleport.beer"),
   title: {
-    default: "TelePort™ — Быстрый VPN. Протокол VLESS + Reality. Оплата картой РФ.",
-    template: "TelePort™ — %s | VPN для России",
+    default: "TelePort™ — Безопасный высокоскоростной доступ к глобальному контенту.",
+    template: "TelePort™ — %s | Глобальный доступ",
   },
-  description: "Скачать VPN, который работает в России. Протокол VLESS-Reality маскирует трафик под обычный сайт. YouTube в 4K, Instagram без зависаний. Оплата картой РФ (СБП) от 99₽. Мгновенное подключение через Telegram.",
-  keywords: ["VPN Россия", "VPN оплата картой", "VLESS Reality", "купить VPN", "быстрый VPN", "VPN для YouTube", "v2RayTun", "TelePort VPN", "телепорт впн", "разблокировать инстаграм"],
+  description: "TelePort — это высокоскоростной приватный протокол для доступа к глобальным медиа, онлайн-играм и стриминговым сервисам. Стабильное соединение для 4K-стриминга и быстрого гейминга. Оплата картой РФ (СБП) от 99₽.",
+  keywords: ["приватная сеть", "vless", "высокая скорость", "стриминг 4k", "онлайн-игры", "глобальный доступ", "v2RayTun", "TelePort", "телепорт"],
   authors: [{ name: "TelePort Team" }],
   openGraph: {
     type: "website",
     locale: "ru_RU",
     url: "https://www.teleport.beer",
-    siteName: "TelePort VPN",
-    title: "TelePort™ — Быстрый VPN. Протокол VLESS + Reality. Оплата картой РФ.",
-    description: "Скачать VPN, который работает в России. Протокол VLESS-Reality маскирует трафик под обычный сайт. YouTube в 4K, Instagram без зависаний. Оплата картой РФ (СБП) от 99₽. Мгновенное подключение через Telegram.",
+    siteName: "TelePort",
+    title: "TelePort™ — Безопасный высокоскоростной доступ к глобальному контенту.",
+    description: "TelePort — это высокоскоростной приватный протокол для доступа к глобальным медиа, онлайн-играм и стриминговым сервисам. Стабильное соединение для 4K-стриминга и быстрого гейминга.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "TelePort VPN Banner",
+        alt: "TelePort Banner",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TelePort™ — Быстрый VPN. Протокол VLESS + Reality. Оплата картой РФ.",
-    description: "Скачать VPN, который работает в России. Протокол VLESS-Reality маскирует трафик под обычный сайт. YouTube в 4K, Instagram без зависаний. Оплата картой РФ (СБП) от 99₽. Мгновенное подключение через Telegram.",
+    title: "TelePort™ — Безопасный высокоскоростной доступ к глобальному контенту.",
+    description: "TelePort — это высокоскоростной приватный протокол для доступа к глобальным медиа, онлайн-играм и стриминговым сервисам. Стабильное соединение для 4K-стриминга и быстрого гейминга.",
     images: ["/og-image.png"],
   },
 };
@@ -53,7 +53,7 @@ export const viewport: Viewport = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TelePort VPN",
+  "name": "TelePort",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "iOS, Android, Windows, macOS",
   "offers": {
@@ -61,7 +61,7 @@ const jsonLd = {
     "price": "99",
     "priceCurrency": "RUB"
   },
-  "description": "Скачать VPN, который работает в России. Протокол VLESS-Reality маскирует трафик под обычный сайт. YouTube в 4K, Instagram без зависаний. Оплата картой РФ (СБП) от 99₽. Мгновенное подключение через Telegram.",
+  "description": "TelePort — это высокоскоростной приватный протокол для доступа к глобальным медиа, онлайн-играм и стриминговым сервисам. Стабильное соединение для 4K-стриминга и быстрого гейминга.",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
