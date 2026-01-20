@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Bot, BookUser } from 'lucide-react';
+import { Bot } from 'lucide-react';
 import { motion } from 'framer-motion';
 import UserLocation from './UserLocation';
 import Link from 'next/link';
