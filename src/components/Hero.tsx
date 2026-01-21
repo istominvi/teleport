@@ -23,7 +23,7 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="mb-6 text-5xl font-semibold tracking-tight text-white sm:text-7xl lg:text-8xl">
+        <h1 className="mb-6 text-4xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
           Интернет без границ и тормозов. Ваш личный телепорт в глобальную сеть
         </h1>
 
