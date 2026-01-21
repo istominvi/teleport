@@ -24,16 +24,12 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="mb-6 text-5xl font-semibold tracking-tight text-white sm:text-7xl lg:text-8xl">
-          YouTube в 4K и{' '}
-          <span className="bg-gradient-to-r from-[#00e0f7] to-[#0366f6] bg-clip-text text-transparent">
-            Instagram
-          </span>
-          {' '}без ожиданий
+          Интернет без границ и тормозов. Ваш личный телепорт в глобальную сеть
         </h1>
 
         {/* Subheadline */}
         <p className="mb-10 max-w-2xl text-lg text-slate-300 sm:text-xl leading-relaxed">
-        Современный VPN на базе VLESS протоколов. Не сажает батарею, не режет скорость, работает там, где другие заблокированы. Оплата любой картой РФ и СБП
+        Соединение на базе VLESS протоколов. Не сажает батарею, не режет скорость, работает там, где другие заблокированы. Оплата любой картой РФ и СБП
         </p>
 
         {/* Buttons */}
