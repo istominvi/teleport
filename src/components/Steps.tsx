@@ -53,7 +53,7 @@ export default function Steps() {
             viewport={{ once: true }}
             className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
           >
-            3 шага к <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">свободе</span>
+            3 шага
           </motion.h2>
         </div>
 
