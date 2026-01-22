@@ -32,7 +32,7 @@ export default function Footer() {
                 >
                     Публичная оферта
                 </Link>
-                <Link href="https://t.me/teleport_support" className="hover:text-white transition-colors flex items-center gap-2">
+                <Link href="https://t.me/teleport_xbot_support" className="hover:text-white transition-colors flex items-center gap-2">
                     Поддержка
                     <Send className="w-4 h-4" />
                 </Link>
