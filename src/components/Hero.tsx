@@ -24,7 +24,7 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="mb-6 text-5xl font-semibold tracking-tight text-white sm:text-7xl lg:text-8xl">
-          Интернет без границ и тормозов. Ваш личный телепорт в глобальную сеть
+          Ваш личный <span className="bg-gradient-to-r from-[#00e0f7] to-[#0366f6] bg-clip-text text-transparent">телепорт</span> в глобальную сеть
         </h1>
 
         {/* Subheadline */}
