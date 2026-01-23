@@ -24,7 +24,7 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="mb-6 text-5xl font-semibold tracking-tight text-white sm:text-7xl lg:text-8xl">
-          Максимальная скорость и <span className="bg-gradient-to-r from-[#00e0f7] to-[#0366f6] bg-clip-text text-transparent">защита</span> вашего соединения
+          Максимальная <span className="bg-gradient-to-r from-[#00e0f7] to-[#0366f6] bg-clip-text text-transparent">скорость</span> и <span className="bg-gradient-to-r from-[#00e0f7] to-[#0366f6] bg-clip-text text-transparent">защита</span> вашего соединения
         </h1>
 
         {/* Subheadline */}
