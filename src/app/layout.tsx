@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.teleport.beer"),
+  metadataBase: new URL("https://www.teleportbot.ru"),
   title: {
     default: "TelePort™ — Защищенная связь. Шифрование трафика и уменьшение пинга.",
     template: "TelePort™ — %s | Защищенная связь. Шифрование трафика и уменьшение пинга.",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ru_RU",
-    url: "https://www.teleport.beer",
+    url: "https://www.teleportbot.ru",
     siteName: "TelePort™",
     title: "TelePort™ — Защищенная связь. Шифрование трафика и уменьшение пинга.",
     description: "Сервис защиты соединения в общественных сетях. Шифрование трафика, снижение пинга в играх и стабильная связь. Официальная оплата картой РФ.",
