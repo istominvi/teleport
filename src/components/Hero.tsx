@@ -24,12 +24,12 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="mb-6 text-5xl font-semibold tracking-tight text-white sm:text-7xl lg:text-8xl">
-          Ваш личный <span className="bg-gradient-to-r from-[#00e0f7] to-[#0366f6] bg-clip-text text-transparent">телепорт</span> в глобальную сеть
+          Максимальная скорость и <span className="bg-gradient-to-r from-[#00e0f7] to-[#0366f6] bg-clip-text text-transparent">защита</span> вашего соединения
         </h1>
 
         {/* Subheadline */}
         <p className="mb-10 max-w-2xl text-lg text-slate-300 sm:text-xl leading-relaxed">
-        Современное зашифрованное соединение. Минимальный пинг, отсутствие ограничений скорости и стабильная работа с любыми провайдерами.
+        Профессиональное шифрование для защиты от киберугроз в открытых сетях. Оптимизация маршрутов для снижения задержки (ping) в онлайн-играх и рабочих приложениях.
         </p>
 
         {/* Buttons */}
